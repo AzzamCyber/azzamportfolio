@@ -33,13 +33,13 @@ export const portfolioData = {
   socialLinks: [
     { name: "Discord Server", sub: "Join Community", icon: DiscordIcon, url: "#", main: true },
     { name: "Instagram", sub: "@azzam.codex", icon: Instagram, url: "#" },
-    { name: "GitHub", sub: "@azzamcodex", icon: Github, url: "#" },
+    { name: "GitHub", sub: "@azzamcodex", icon: Github, url: "https://github.com/AzzamCyber" },
     { name: "Youtube", sub: "Azzam Codex", icon: Youtube, url: "#" },
   ],
 
   skills: [
     { category: "Frontend", items: ["HTML", "CSS", "React", "Next.js", "TailwindCSS", "Framer Motion"], icon: Layout },
-    { category: "Backend", items: ["Node.js", "Express", "PHP", "Laravel"], icon: Server },
+    { category: "Backend", items: ["Node.js", "Express", "PHP", "Python" , "Laravel"], icon: Server },
     { category: "Database", items: ["MySQL", "PostgreSQL", "MongoDB"], icon: Database },
     { category: "Game Dev", items: ["Lua (FiveM)", "Electron.js", "C#"], icon: Cpu },
     { category: "Tools", items: ["Git", "Docker", "Figma", "VS Code"], icon: Terminal },
@@ -48,10 +48,10 @@ export const portfolioData = {
   certificates: [
     {
       id: 1,
-      title: "Google UX Design Professional",
-      issuer: "Google",
-      year: "2023",
-      desc: "Fondasi desain UX, wireframing, dan prototyping modern.",
+      title: "Software Engineer Intern Certificate",
+      issuer: "HackerRank",
+      year: "2024",
+      desc: "It covers topics like Problem solving and SQL.",
     },
     {
       id: 2,
@@ -66,44 +66,51 @@ export const portfolioData = {
       issuer: "Dicoding",
       year: "2022",
       desc: "Standar industri frontend development.",
-    }
+    },
+    {
+      id: 4,
+      title: "SQL (Advanced) Certificate",
+      issuer: "HackerRank",
+      year: "2024",
+      desc: "It covers topics like query optimization, data modeling, Indexing, window functions, and pivots in SQL.",
+    },
   ],
 
   projects: [
     {
-      id: "nata-windows-pack",
-      title: "Nata Windows Pack",
-      tech: ["Electron", "Node.js"],
-      desc: "Installer otomatis untuk optimasi Windows gaming.",
-      image: "https://emshopeindo.codexhosting.my.id/assets/natawindows.png"
+      id: "natafilm",
+      title: "Website NataFilm",
+      tech: ["PHP", "JS","Mysql"],
+      desc: "Website Nonton Film Gratis Inspirasi UI/UX By Netflix.",
+      image: "https://emshopeindo.codexhosting.my.id/assets/natafilm.png"
     },
     {
-      id: "anticheat-gta-rp",
-      title: "Sistem Anticheat GTA",
-      tech: ["Lua", "FiveM ESX"],
-      desc: "Proteksi server real-time dari injeksi program ilegal.",
-      image: "https://placehold.co/800x450/050505/7000ff?text=Anticheat"
+      id: "sentracomp",
+      title: "Website Sentra Computer",
+      tech: ["PHP", "Mysql", "Tailwind"],
+      desc: "Marketplace Laptop Simple With PHP.",
+      image: "https://emshopeindo.codexhosting.my.id/assets/sentra.png"
     },
     {
-      id: "parkour-exs",
-      title: "Sistem Parkour EXS",
-      tech: ["Lua", "Game Logic"],
-      desc: "Sistem event parkour dengan leaderboard otomatis.",
-      image: "https://placehold.co/800x450/050505/00f0ff?text=Parkour+System"
+      id: "natatols",
+      title: "Website Natatools Online",
+      tech: ["PHP", "NodeJs","Python","Git"],
+      desc: "Sebuah Tools Online Up To 50+ Tools Developer.",
+      image: "https://emshopeindo.codexhosting.my.id/assets/natatols.png"
     },
     {
-      id: "billing-hosting",
-      title: "Website Billing Hosting",
-      tech: ["Next.js", "PostgreSQL"],
-      desc: "Manajemen hosting dan invoice otomatis.",
-      image: "https://placehold.co/800x450/050505/7000ff?text=Billing+App"
+      id: "Nataspeedtest",
+      title: "Website SpeedTest",
+      tech: ["Next.js", "Git"],
+      desc: "Website Untuk SpeedTest Internet Secara Realtime Inpirasi By Speedtest By Ookla.",
+      image: "https://emshopeindo.codexhosting.my.id/assets/nataspeed.png"
     },
     {
-      id: "redeem-panel",
-      title: "Redeem Code System",
-      tech: ["PHP", "JS"],
-      desc: "Panel manajemen kode hadiah eksklusif.",
-      image: "https://placehold.co/800x450/050505/00f0ff?text=Redeem+Panel"
+      id: "NataCafe",
+      title: "NataCafe",
+      tech: ["PHP", "Mysql","Tailwind"],
+      desc: "Kasir System Untuk Mencatat , Mencetak Pembelian.",
+      image: "https://emshopeindo.codexhosting.my.id/assets/natacafe.png"
     },
   ]
 };

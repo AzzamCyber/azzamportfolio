@@ -9,6 +9,8 @@ import ScrollToTop from '@/components/ui/ScrollToTop';
 import Preloader from '@/components/ui/Preloader';
 import { portfolioData } from '@/data/portfolio';
 import Link from 'next/link';
+import HackerText from '@/components/ui/HackerText'; // <--- Import ini
+import ActivityGraph from '@/components/ui/ActivityGraph';
 
 // --- MAPPING ICON DARI DEVICON CDN (Icon Asli Berwarna) ---
 const techIcons = {
@@ -38,6 +40,7 @@ const techIcons = {
   "Electron.js": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg",
   "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
   "VS Code": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
 };
 
 // --- AOS Animation Variant ---
@@ -149,13 +152,13 @@ export default function Home() {
           <ScrollToTop />
 
           {/* HERO SECTION */}
-          <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center z-10">
+          <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+            <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center z-10">
               <motion.div 
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="order-2 md:order-1 flex flex-col space-y-6"
+                className="order-2 md:order-1 flex flex-col space-y-5"
               >
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider w-fit">
                   <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
@@ -163,10 +166,11 @@ export default function Home() {
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                  Hi, I'm <br />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient">
-                    {portfolioData.personal.name}
-                  </span>
+                Hi, I'm <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient">
+                  {/* GANTI TEXT BIASA DENGAN INI */}
+                 <HackerText text={portfolioData.personal.name} />
+               </span>
                 </h1>
                 
                 <p className="text-lg text-gray-400 max-w-lg leading-relaxed">
@@ -249,6 +253,13 @@ export default function Home() {
               </div>
             </div>
           </motion.section>
+
+          {/* SECTION ACTIVITY GRAPH */}
+      <section className="py-8 px-6 md:px-12 relative z-10">
+          <div className="container mx-auto max-w-6xl">
+          <ActivityGraph />
+        </div>
+      </section>
 
           {/* --- PORTFOLIO SHOWCASE SECTION --- */}
           <section id="showcase" className="py-24 px-6 md:px-12 relative z-10">
@@ -521,7 +532,7 @@ export default function Home() {
                   </div>
                 </div>
              </div>
-          </motion.section>
+          </motion.section>                
 
           <footer className="py-8 text-center text-gray-600 text-sm border-t border-white/5">
             © {new Date().getFullYear()} {portfolioData.personal.name}. Built with Next.js & R3F.
