@@ -31,10 +31,10 @@ export const portfolioData = {
   },
 
   socialLinks: [
-    { name: "Discord Server", sub: "Join Community", icon: DiscordIcon, url: "#", main: true },
-    { name: "Instagram", sub: "@azzam.codex", icon: Instagram, url: "#" },
+    { name: "Discord Server", sub: "Join Community", icon: DiscordIcon, url: "azzamcdx.com", main: true },
+    { name: "Instagram", sub: "@azzam.codex", icon: Instagram, url: "https://www.instagram.com/azzamcodex/" },
     { name: "GitHub", sub: "@azzamcodex", icon: Github, url: "https://github.com/AzzamCyber" },
-    { name: "Youtube", sub: "Azzam Codex", icon: Youtube, url: "#" },
+    { name: "Youtube", sub: "Azzam Codex", icon: Youtube, url: "-" },
   ],
 
   skills: [
@@ -74,6 +74,20 @@ export const portfolioData = {
       year: "2024",
       desc: "It covers topics like query optimization, data modeling, Indexing, window functions, and pivots in SQL.",
     },
+    {
+      id: 5,
+      title: "SQL Intermediate",
+      issuer: "HackerRank",
+      year: "2024",
+      desc: "It includes complex joins, unions, and sub-queries.",
+    },
+    {
+      id: 6,
+      title: "Problem Solving",
+      issuer: "HackerRank",
+      year: "2024",
+      desc: "It covers basic topics of Data Structures (such as Arrays, Strings) and Algorithms (such as Sorting and Searching).",
+    },
   ],
 
   projects: [
@@ -83,6 +97,13 @@ export const portfolioData = {
       tech: ["PHP", "JS","Mysql"],
       desc: "Website Nonton Film Gratis Inspirasi UI/UX By Netflix.",
       image: "https://emshopeindo.codexhosting.my.id/assets/natafilm.png"
+    },
+    {
+      id: "nataai",
+      title: "Website Nata-Ai",
+      tech: ["ReactJS", "ThreeJS","Mysql","NextJS","TailwindCss"],
+      desc: "Website Ai Free No Limit Up To 15 Models AI.",
+      image: "/project/nata-ai.png"
     },
     {
       id: "sentracomp",

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 // Simulasi Data Kontribusi (365 hari ke belakang)
 const generateData = () => {
   const data = [];
-  const levels = [0, 1, 2, 3, 4]; // 0: Kosong, 4: Sangat Aktif
+  const levels = [2, 3, 4, 3, 4]; // 0: Kosong, 4: Sangat Aktif
   
   for (let i = 0; i < 52 * 7; i++) {
     // Randomize level dengan bias agar terlihat "rajin" (lebih banyak isi daripada kosong)
@@ -13,8 +13,8 @@ const generateData = () => {
     let level = 0;
     if (random > 0.8) level = 4;
     else if (random > 0.6) level = 3;
-    else if (random > 0.4) level = 2;
-    else if (random > 0.2) level = 1;
+    else if (random > 0.4) level = 10;
+    else if (random > 0.2) level = 5;
     
     data.push({
       date: new Date(Date.now() - (364 - i) * 24 * 60 * 60 * 1000).toDateString(),
@@ -50,7 +50,7 @@ export default function ActivityGraph() {
       <div className="flex justify-between items-end mb-6">
         <div>
           <h3 className="text-xl font-bold text-white mb-1">Coding Activity</h3>
-          <p className="text-sm text-gray-400">1,240 contributions in the last year</p>
+          <p className="text-sm text-gray-400">1,440 contributions in the last year</p>
         </div>
         <div className="flex items-center gap-2 text-xs text-gray-500">
           <span>Less</span>
